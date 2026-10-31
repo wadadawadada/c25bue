@@ -1744,6 +1744,21 @@
     "speakerOrder": 18
   },
   {
+    "id": "robert-macwha",
+    "name": "ROBERT MACWHA",
+    "photo": "img/Robert MacWha.jpeg",
+    "xUrl": "https://www.linkedin.com/in/robert-macwha-0555141b6/",
+    "tagline": "ML & Blockchain Developer",
+    "role": "CEO",
+    "orgName": "Skylock",
+    "orgUrl": "https://skylock.xyz",
+    "industries": [
+      "Privacy"
+    ],
+    "speaker2026": true,
+    "speakerOrder": 40
+  },
+  {
     "id": "roger-dingledine",
     "name": "ROGER DINGLEDINE",
     "photo": "img/roger.png",
