@@ -295,6 +295,22 @@
     "speakerOrder": 8
   },
   {
+    "id": "ben-gwei",
+    "name": "ben.gwei",
+    "photo": "img/ben-gwei.png",
+    "xUrl": "https://x.com/unhappyben",
+    "tagline": "Privacy maximalist",
+    "role": "Contributor",
+    "orgName": "Armada",
+    "orgUrl": "https://armada.blue",
+    "industries": [
+      "Privacy",
+      "Digital Rights"
+    ],
+    "speaker2026": true,
+    "speakerOrder": 40
+  },
+  {
     "id": "beth-mccarthy",
     "name": "BETH MCCARTHY",
     "photo": "img/beth mccarthy.jpg",
