@@ -561,10 +561,10 @@
     "title": "More Like Ethereum, Less Like SaaS: Why Businesses Need Cypherpunk Systems",
     "description": "Cypherpunk guarantees are valuable not because everyone wants to live a cypherpunk life, but because credible exit changes the behaviour of the systems people normally use. As businesses move payroll, treasury and payments on-chain, those guarantees become practical requirements. What happens when governance is captured, the founding team disappears, or an intermediary stops cooperating?\n\nPrivacy makes the problem concrete. The assets in a system can be recoverable, while losing the privacy that justified using it. Business infrastructure should inherit Ethereum’s trust model rather than recreate vendor dependence one layer higher, and infrastructure built this way benefits everyone.",
     "descriptionFull": "Ethereum offers a unique value proposition: infrastructure with guarantees independent from counterparties. Ethereum works predictably, without the need for a vendor to operate, cooperate, or remain benevolent. But apps built on Ethereum often reintroduce those dependencies one layer higher (eg. governance, upgrade authority, relayers, hosted infra).\n\nFor orgs, this is different from an ideological problem. A competitor gaining influence over critical payment infra is counterparty risk. A maintainer team disappearing is continuity risk. An intermediary refusing service is operational risk.\n\nWe can use the walkaway test to evaluate what should still work when these dependencies fail. And recovering funds is table stakes. A shielded system can ensure asset recovery while losing the privacy that made it useful.\n\nBusiness adoption does not require weakening cypherpunk guarantees. In fact, with enough economic importance, I think cypherpunk guarantees will become ordinary infrastructure requirements. We are building systems strong enough for businesses to depend on so that everyone can inherit the same protections.",
-    "stage": "FOSS Zone",
+    "stage": "Puttaswamy",
     "format": "Talk",
-    "startTime": "15:00",
-    "endTime": "15:30",
+    "startTime": "14:30",
+    "endTime": "14:55",
     "date": "2026-11-02",
     "speakers": [
       {
@@ -596,7 +596,7 @@
     "stage": "Shreya Singhal",
     "format": "Session",
     "startTime": "15:00",
-    "endTime": "15:25",
+    "endTime": "15:30",
     "date": "2026-11-02",
     "speakers": [
       {
@@ -606,12 +606,12 @@
   },
   {
     "id": "main-stage-15-ahmed-ghappour-x-flashbots",
-    "title": "The Node Atlas: Mapping the Hidden Architecture of Power",
+    "title": "The Law at Every Hop: Mapping State Power over Privacy Networks",
     "description": "Ahmed Ghappour is an Associate Professor of Law at Boston University School of Law, specialising in criminal law, cybersecurity, digital surveillance and national security. His interdisciplinary research examines the intersection of technology, state power and civil liberties, with particular attention to government hacking, digital privacy and the legal implications of emerging technologies. He previously founded the Liberty, Security & Technology Clinic at UC Hastings, providing legal representation in cases involving espionage, computer crime and constitutional rights. Earlier in his career, he represented Guantánamo detainees at Reprieve UK and worked as a computer engineer.",
     "descriptionFull": "",
     "stage": "Shreya Singhal",
     "format": "Session",
-    "startTime": "15:25",
+    "startTime": "15:30",
     "endTime": "16:00",
     "date": "2026-11-02",
     "speakers": [
