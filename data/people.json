@@ -1,5 +1,21 @@
 [
   {
+    "id": "alaska",
+    "name": "Alaska",
+    "photo": "img/alaska.jpeg",
+    "xUrl": "https://x.com/akprettyok",
+    "tagline": "Where culture meets engineering: DJ, producer, community organizer, engineer,",
+    "role": "Multiple hats",
+    "orgName": "Swarm",
+    "orgUrl": "https://www.ethswarm.org",
+    "industries": [
+      "Privacy",
+      "Art"
+    ],
+    "speaker2026": true,
+    "speakerOrder": 45
+  },
+  {
     "id": "ahmed-ghappour",
     "name": "AHMED GHAPPOUR",
     "photo": "img/ahmedghappour.png",
