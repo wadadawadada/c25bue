@@ -330,12 +330,14 @@
 
       /* Mini speaker chips: avatar with name and organization beneath. */
       .session-speaker {
-        width: 84px;
+        flex: 0 0 auto;
+        width: max-content;
+        min-width: 84px;
+        max-width: 120px;
         display: flex;
         flex-direction: column;
         align-items: center;
         text-align: center;
-        min-width: 0;
       }
       .session-speaker-avatar {
         width: 64px;
@@ -354,7 +356,7 @@
         line-height: 1.2;
         color: #fff;
         max-width: 100%;
-        overflow-wrap: anywhere;
+        overflow-wrap: break-word;
       }
       .session-speaker-org {
         margin-top: 0.15rem;
@@ -435,7 +437,7 @@
         .session-item-many .session-speakers {
           justify-content: flex-end;
           gap: 0.8rem;
-          max-width: calc(var(--cols, 3) * 84px + (var(--cols, 3) - 1) * 0.8rem);
+          max-width: calc(var(--cols, 3) * 100px + (var(--cols, 3) - 1) * 0.8rem);
         }
       }
       /* 3+ speakers: "Read more." (left) and the speaker chips (right)
