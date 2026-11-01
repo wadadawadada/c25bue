@@ -713,6 +713,70 @@
 #filter-bar-stage [data-value="All"] {
   order: 4;
 }
+    
+      /* Visible names for every scheduled speaker, including panelists. */
+      .session-speakers {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 0.8rem 0.6rem;
+        max-width: 15rem;
+      }
+      .session-speaker-person {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 72px;
+        min-width: 0;
+        text-align: center;
+      }
+      .session-speaker-person .session-speaker-avatar,
+      .session-speaker-placeholder {
+        width: 64px;
+        height: 64px;
+        margin: 0;
+        flex-shrink: 0;
+        border-radius: 50%;
+      }
+      .session-speaker-placeholder {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #252525;
+        color: #fff;
+        font-family: "DM Sans", sans-serif;
+      }
+      .session-speaker-name {
+        display: block;
+        margin-top: 0.4rem;
+        font-family: "DM Sans", sans-serif;
+        font-size: 0.72rem;
+        font-weight: 600;
+        line-height: 1.35;
+        color: #fff;
+        white-space: normal;
+        overflow-wrap: anywhere;
+      }
+      @media (max-width: 640px) {
+        .session-speakers {
+          position: static;
+          max-width: 100%;
+          width: 100%;
+          margin-top: 0.35rem;
+        }
+        .session-main { padding-bottom: 0; }
+        .session-main .read-more-link {
+          position: static;
+          margin-top: 0.3rem;
+        }
+        .session-speaker-person .session-speaker-avatar,
+        .session-speaker-placeholder {
+          width: 56px;
+          height: 56px;
+          margin: 0;
+        }
+      }
     </style>
   </head>
 
@@ -979,20 +1043,16 @@
           return speakers.map(speakerChipHtml).join('');
         }
 
-        // Compact overlapping-avatar strip for the list row (names/roles
-        // only appear in the modal, to keep each row single-line).
-        function speakerAvatarsHtml(speakers, limit) {
-          var needsMore = limit && speakers.length > limit;
-          var shownCount = needsMore ? limit - 1 : (limit || speakers.length);
-          var shown = speakers.slice(0, shownCount);
-          var hidden = speakers.length - shown.length;
-          var html = shown.map(function (speaker) {
-            return '<img class="session-speaker-avatar" src="' + escapeHtml(speaker.photo) + '" alt="' + escapeHtml(speaker.name) + '" title="' + escapeHtml(speaker.name) + '" loading="lazy" />';
+        // Show every speaker's name directly below their portrait.
+        function speakerAvatarsHtml(speakers) {
+          return (speakers || []).map(function (speaker) {
+            var name = speaker.name || '';
+            var portrait = speaker.photo
+              ? '<img class="session-speaker-avatar" src="' + escapeHtml(speaker.photo) + '" alt="' + escapeHtml(name) + '" loading="lazy" />'
+              : '<span class="session-speaker-placeholder" aria-hidden="true">' + escapeHtml(name.split(/\s+/).map(function (part) { return part.charAt(0); }).slice(0, 2).join('')) + '</span>';
+            return '<div class="session-speaker-person">' + portrait +
+              '<span class="session-speaker-name">' + escapeHtml(name) + '</span></div>';
           }).join('');
-          if (hidden > 0) {
-            html += '<div class="session-speaker-more">+' + hidden + '</div>';
-          }
-          return html;
         }
 
         function createSessionCard(session) {
